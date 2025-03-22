@@ -33,50 +33,52 @@
 > [!NOTE]
 > 由于项目搭建在Github Aciton，延时数据获取于Github Action 虚拟主机网络环境，请自行测试可用性，建议使用本地网络环境自动设置。
 
-2.1.2 修改 hosts 文件
+#### 2.1.3 修改 hosts 文件
+
 hosts 文件在每个系统的位置不一，详情如下：
 
-Windows 系统：C:\Windows\System32\drivers\etc\hosts
-Linux 系统：/etc/hosts
-Mac（苹果电脑）系统：/etc/hosts
-Android（安卓）系统：/system/etc/hosts
-iPhone（iOS）系统：/etc/hosts
+- Windows 系统：`C:\Windows\System32\drivers\etc\hosts`
+- Linux 系统：`/etc/hosts`
+- Mac（苹果电脑）系统：`/etc/hosts`
+- Android（安卓）系统：`/system/etc/hosts`
+- iPhone（iOS）系统：`/etc/hosts`
+
 修改方法，把第一步的内容复制到文本末尾：
 
-Windows 使用记事本。
-Linux、Mac 使用 Root 权限：sudo vi /etc/hosts。
-iPhone、iPad 须越狱、Android 必须要 root。
-2.1.3 激活生效
+1. Windows 使用记事本。
+2. Linux、Mac 使用 Root 权限：`sudo vi /etc/hosts`。
+3. iPhone、iPad 须越狱、Android 必须要 root。
+
+#### 2.1.4 激活生效
+
 大部分情况下是直接生效，如未生效可尝试下面的办法，刷新 DNS：
 
-Windows：在 CMD 窗口输入：ipconfig /flushdns
+1. Windows：在 CMD 窗口输入：`ipconfig /flushdns`
 
-Linux 命令：sudo nscd restart，如报错则须安装：sudo apt install nscd 或 sudo /etc/init.d/nscd restart
+2. Linux 命令：`sudo nscd restart`，如报错则须安装：`sudo apt install nscd` 或 `sudo /etc/init.d/nscd restart`
 
-Mac 命令：sudo killall -HUP mDNSResponder
+3. Mac 命令：`sudo killall -HUP mDNSResponder`
 
-Tips： 上述方法无效可以尝试重启机器。
+**Tips：** 上述方法无效可以尝试重启机器。
 
-2.2 自动方式（SwitchHosts）
-Tip：推荐 SwitchHosts 工具管理 hosts
+### 2.2 自动方式
+#### 2.2.1 安装 SwitchHosts
+GitHub 发行版：https://github.com/oldj/SwitchHosts/releases/latest
+#### 2.2.2 添加 hosts
 
-以 SwitchHosts 为例，看一下怎么使用的，配置参考下面：
+点击左上角“+”，并进行以下配置：
 
-Hosts 类型: Remote
+- Hosts 类型：`远程`
+- Hosts 标题：任意
+- URL  `https://raw.githubusercontent.com/938134/check_hosts/refs/heads/main/hosts`
+- ![011a366027249ce7ff7e0f4b0e7b8206_switch-hosts](https://github.com/user-attachments/assets/baf341e0-e786-4836-8e8d-264fac0158dd)
+- 自动刷新：`1 小时`
+- 
+#### 2.2.3 启用 hosts
 
-Hosts 标题: 随意
+在左侧边栏启用 hosts，首次使用时软件会自动获取内容。如果无法连接到 GitHub，可以尝试用同样的方法添加 [GitHub520](https://github.com/521xueweihan/GitHub520) hosts。
 
-URL: https://raw.hellogithub.com/hosts
-
-自动刷新: 最好选 1 小时
-
-如图：
-
-
-
-这样每次 hosts 有更新都能及时进行更新，免去手动更新。
-
-2.3 一行命令
+### 2.3 一行命令
 Windows
 使用命令需要安装git bash 复制以下命令保存到本地命名为fetch_github_hosts
 
@@ -108,7 +110,7 @@ sudo sed -i "" "/# GitHub520 Host Start/,/# Github520 Host End/d" /etc/hosts && 
 
 cp /etc/hosts ~/hosts.new && sed -i "/# GitHub520 Host Start/Q" ~/hosts.new && curl https://raw.hellogithub.com/hosts >> ~/hosts.new && cp -f ~/hosts.new /etc/hosts
 
-2.4 AdGuard 用户（自动方式）
+### 2.4 AdGuard 用户（自动方式）
 在 过滤器>DNS 封锁清单>添加阻止列表>添加一个自定义列表，配置如下：
 
 名称：随意
@@ -132,53 +134,6 @@ Tip：不要添加在 DNS 允许清单 内，只能添加在 DNS 封锁清单 �
 
 修改完 hosts 的样子：
 <img width="964" alt="140b91c32028d1f7a3e00faddaf8807e_new" src="https://github.com/user-attachments/assets/d976f77e-422a-4fc6-a5b6-90b00edbbae9" />
-
-#### 2.1.3 修改 hosts 文件
-
-hosts 文件在每个系统的位置不一，详情如下：
-
-- Windows 系统：`C:\Windows\System32\drivers\etc\hosts`
-- Linux 系统：`/etc/hosts`
-- Mac（苹果电脑）系统：`/etc/hosts`
-- Android（安卓）系统：`/system/etc/hosts`
-- iPhone（iOS）系统：`/etc/hosts`
-
-修改方法，把第一步的内容复制到文本末尾：
-
-1. Windows 使用记事本。
-2. Linux、Mac 使用 Root 权限：`sudo vi /etc/hosts`。
-3. iPhone、iPad 须越狱、Android 必须要 root。
-
-#### 2.1.4 激活生效
-
-大部分情况下是直接生效，如未生效可尝试下面的办法，刷新 DNS：
-
-1. Windows：在 CMD 窗口输入：`ipconfig /flushdns`
-
-2. Linux 命令：`sudo nscd restart`，如报错则须安装：`sudo apt install nscd` 或 `sudo /etc/init.d/nscd restart`
-
-3. Mac 命令：`sudo killall -HUP mDNSResponder`
-
-**Tips：** 上述方法无效可以尝试重启机器。
-
-### 2.2 自动方式
-
-#### 2.2.1 安装 SwitchHosts
-
-GitHub 发行版：https://github.com/oldj/SwitchHosts/releases/latest
-
-#### 2.2.2 添加 hosts
-
-点击左上角“+”，并进行以下配置：
-
-- Hosts 类型：`远程`
-- Hosts 标题：任意
-- URL  `https://raw.githubusercontent.com/938134/check_hosts/refs/heads/main/hosts`
-- 自动刷新：`1 小时`
-
-#### 2.2.3 启用 hosts
-
-在左侧边栏启用 hosts，首次使用时软件会自动获取内容。如果无法连接到 GitHub，可以尝试用同样的方法添加 [GitHub520](https://github.com/521xueweihan/GitHub520) hosts。
 
 ## 其他
 
