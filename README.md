@@ -1,6 +1,6 @@
 # CheckTMDB
 
-每日自动更新TMDB，themoviedb、thetvdb 国内可正常连接IP，解决DNS污染，供tinyMediaManager(TMM削刮器)、Kodi的刮削器、群晖VideoStation的海报墙、Plex Server的元数据代理、Emby Server元数据下载器、Infuse、Nplayer等正常削刮影片信息。
+每日自动更新TMDB，themoviedb、thetvdb、github 国内可正常连接IP，解决DNS污染，供tinyMediaManager(TMM削刮器)、Kodi的刮削器、群晖VideoStation的海报墙、Plex Server的元数据代理、Emby Server元数据下载器、Infuse、Nplayer等正常削刮影片信息。
 
 ## 一、前景
 
@@ -17,94 +17,94 @@
 #### 2.1.1 IPv4地址复制下面的内容
 
 ```bash
-3.167.192.58                tmdb.org
-3.167.192.73                api.tmdb.org
-3.167.192.77                files.tmdb.org
-18.154.144.60               themoviedb.org
-3.167.212.23                api.themoviedb.org
-18.154.144.60               www.themoviedb.org
-18.154.132.87               auth.themoviedb.org
-143.244.50.89               image.tmdb.org
-143.244.50.89               images.tmdb.org
-52.94.237.74                imdb.com
+3.167.192.52                tmdb.org
+3.167.192.35                api.tmdb.org
+3.167.192.70                files.tmdb.org
+18.154.144.22               themoviedb.org
+3.167.212.66                api.themoviedb.org
+18.154.144.73               www.themoviedb.org
+18.154.132.115              auth.themoviedb.org
+143.244.49.177              image.tmdb.org
+143.244.49.177              images.tmdb.org
+52.94.228.167               imdb.com
 18.164.172.55               www.imdb.com
-52.94.237.74                secure.imdb.com
+52.94.228.167               secure.imdb.com
 18.164.172.55               s.media-imdb.com
-52.94.228.167               us.dd.imdb.com
+52.94.225.248               us.dd.imdb.com
 18.164.172.55               www.imdb.to
-98.82.155.134               origin-www.imdb.com
-13.249.127.194              ia.media-imdb.com
+98.82.158.179               origin-www.imdb.com
+199.232.45.16               ia.media-imdb.com
 18.154.130.110              thetvdb.com
 3.167.194.87                api.thetvdb.com
-13.249.127.194              ia.media-imdb.com
+199.232.45.16               ia.media-imdb.com
 199.232.45.16               f.media-amazon.com
-13.226.225.122              imdb-video.media-imdb.com
+13.226.225.32               imdb-video.media-imdb.com
 140.82.113.25               alive.github.com
 20.205.243.168              api.github.com
-185.199.108.133             avatars.githubusercontent.com
-185.199.109.133             avatars0.githubusercontent.com
-185.199.110.133             avatars1.githubusercontent.com
-185.199.109.133             avatars2.githubusercontent.com
+185.199.111.133             avatars.githubusercontent.com
+185.199.108.133             avatars0.githubusercontent.com
+185.199.109.133             avatars1.githubusercontent.com
+185.199.110.133             avatars2.githubusercontent.com
 185.199.111.133             avatars3.githubusercontent.com
-185.199.111.133             avatars4.githubusercontent.com
+185.199.110.133             avatars4.githubusercontent.com
 185.199.110.133             avatars5.githubusercontent.com
-185.199.108.133             camo.githubusercontent.com
-140.82.114.21               central.github.com
-185.199.110.133             cloud.githubusercontent.com
+185.199.110.133             camo.githubusercontent.com
+140.82.112.22               central.github.com
+185.199.109.133             cloud.githubusercontent.com
 20.205.243.165              codeload.github.com
-140.82.114.21               collector.github.com
+140.82.112.22               collector.github.com
 185.199.110.133             desktop.githubusercontent.com
-185.199.109.133             favicons.githubusercontent.com
+185.199.111.133             favicons.githubusercontent.com
 20.205.243.166              gist.github.com
-3.5.29.71                   github-cloud.s3.amazonaws.com
-54.231.199.9                github-com.s3.amazonaws.com
-3.5.29.71                   github-production-release-asset-2e65be.s3.amazonaws.com
-52.216.53.233               github-production-repository-file-5c1aeb.s3.amazonaws.com
-52.216.214.217              github-production-user-asset-6210df.s3.amazonaws.com
+52.216.28.20                github-cloud.s3.amazonaws.com
+3.5.9.205                   github-com.s3.amazonaws.com
+52.216.28.20                github-production-release-asset-2e65be.s3.amazonaws.com
+52.217.134.49               github-production-repository-file-5c1aeb.s3.amazonaws.com
+52.216.137.188              github-production-user-asset-6210df.s3.amazonaws.com
 192.0.66.2                  github.blog
 20.205.243.166              github.com
 140.82.112.18               github.community
-185.199.111.154             github.githubassets.com
+185.199.108.154             github.githubassets.com
 151.101.77.194              github.global.ssl.fastly.net
-185.199.108.153             github.io
+185.199.110.153             github.io
 185.199.109.133             github.map.fastly.net
 185.199.108.153             githubstatus.com
 140.82.113.25               live.github.com
 185.199.110.133             media.githubusercontent.com
-185.199.108.133             objects.githubusercontent.com
+185.199.110.133             objects.githubusercontent.com
 13.107.42.16                pipelines.actions.githubusercontent.com
-185.199.110.133             raw.githubusercontent.com
-185.199.111.133             user-images.githubusercontent.com
+185.199.108.133             raw.githubusercontent.com
+185.199.109.133             user-images.githubusercontent.com
 13.107.246.73               vscode.dev
-140.82.114.21               education.github.com
-185.199.111.133             private-user-images.githubusercontent.com
+140.82.112.22               education.github.com
+185.199.110.133             private-user-images.githubusercontent.com
 ```
 
-该内容会自动定时更新， 数据更新时间：2025-03-22T06:12:11+08:00
+该内容会自动定时更新， 数据更新时间：2025-03-22T10:21:17+08:00
 
 #### 2.1.2 IPv6地址复制下面的内容
 
 ```bash
-2600:9000:27e0:bc00:10:db24:6940:93a1              tmdb.org
-2600:9000:27e0:dc00:10:fb02:4000:93a1              api.tmdb.org
-2600:9000:27e0:e600:5:da10:7440:93a1               files.tmdb.org
-2600:9000:24da:2400:e:5373:440:93a1                themoviedb.org
-2600:9000:27e3:6a00:c:174a:c400:93a1               api.themoviedb.org
-2600:9000:24da:2a00:e:5373:440:93a1                www.themoviedb.org
-2600:9000:24db:3800:16:e4a1:eb00:93a1              auth.themoviedb.org
-2400:52e0:1a01::954:1                              image.tmdb.org
-2400:52e0:1a01::954:1                              images.tmdb.org
-2600:9000:2365:f600:1d:d7f6:39d4:e6e1              ia.media-imdb.com
-2600:9000:2365:f600:1d:d7f6:39d4:e6e1              ia.media-imdb.com
+2600:9000:27e0:5e00:10:db24:6940:93a1              tmdb.org
+2600:9000:27e0:7400:10:fb02:4000:93a1              api.tmdb.org
+2600:9000:27e0:fe00:5:da10:7440:93a1               files.tmdb.org
+2600:9000:24da:e200:e:5373:440:93a1                themoviedb.org
+2600:9000:27e3:8800:c:174a:c400:93a1               api.themoviedb.org
+2600:9000:24da:f600:e:5373:440:93a1                www.themoviedb.org
+2600:9000:24db:9800:16:e4a1:eb00:93a1              auth.themoviedb.org
+2400:52e0:1a01::992:1                              image.tmdb.org
+2400:52e0:1a01::1001:1                             images.tmdb.org
+2a04:4e42:48::272                                  ia.media-imdb.com
+2a04:4e42:48::272                                  ia.media-imdb.com
 2a04:4e42:48::272                                  f.media-amazon.com
-2606:50c0:8002::154                                avatars.githubusercontent.com
-2606:50c0:8000::154                                media.githubusercontent.com
+2606:50c0:8000::154                                avatars.githubusercontent.com
+2606:50c0:8002::154                                media.githubusercontent.com
 2620:1ec:21::16                                    pipelines.actions.githubusercontent.com
-2606:50c0:8001::154                                raw.githubusercontent.com
-2606:50c0:8000::154                                user-images.githubusercontent.com
+2606:50c0:8002::154                                raw.githubusercontent.com
+2606:50c0:8001::154                                user-images.githubusercontent.com
 ```
 
-该内容会自动定时更新， 数据更新时间：2025-03-22T06:12:11+08:00
+该内容会自动定时更新， 数据更新时间：2025-03-22T10:21:17+08:00
 
 > [!NOTE]
 > 由于项目搭建在Github Aciton，延时数据获取于Github Action 虚拟主机网络环境，请自行测试可用性，建议使用本地网络环境自动设置。
@@ -138,11 +138,8 @@ hosts 文件在每个系统的位置不一，详情如下：
 **Tips：** 上述方法无效可以尝试重启机器。
 
 ### 2.2 自动方式
-
 #### 2.2.1 安装 SwitchHosts
-
 GitHub 发行版：https://github.com/oldj/SwitchHosts/releases/latest
-
 #### 2.2.2 添加 hosts
 
 点击左上角“+”，并进行以下配置：
@@ -150,11 +147,69 @@ GitHub 发行版：https://github.com/oldj/SwitchHosts/releases/latest
 - Hosts 类型：`远程`
 - Hosts 标题：任意
 - URL  `https://raw.githubusercontent.com/938134/check_hosts/refs/heads/main/hosts`
+- ![011a366027249ce7ff7e0f4b0e7b8206_switch-hosts](https://github.com/user-attachments/assets/baf341e0-e786-4836-8e8d-264fac0158dd)
 - 自动刷新：`1 小时`
-
+- 
 #### 2.2.3 启用 hosts
 
 在左侧边栏启用 hosts，首次使用时软件会自动获取内容。如果无法连接到 GitHub，可以尝试用同样的方法添加 [GitHub520](https://github.com/521xueweihan/GitHub520) hosts。
+
+### 2.3 一行命令
+Windows
+使用命令需要安装git bash 复制以下命令保存到本地命名为fetch_github_hosts
+
+_hosts=$(mktemp /tmp/hostsXXX)
+hosts=/c/Windows/System32/drivers/etc/hosts
+remote=https://raw.hellogithub.com/hosts
+reg='/# GitHub520 Host Start/,/# Github520 Host End/d'
+
+sed "$reg" $hosts > "$_hosts"
+curl "$remote" >> "$_hosts"
+cat "$_hosts" > "$hosts"
+
+rm "$_hosts"
+在CMD中执行以下命令，执行前需要替换git-bash.exe和fetch_github_hosts为你本地的路径，注意前者为windows路径格式后者为shell路径格式
+
+"C:\Program Files\Git\git-bash.exe" -c "/c/Users/XXX/fetch_github_hosts"
+
+可以将上述命令添加到windows的task schedular（任务计划程序）中以定时执行
+
+GNU（Ubuntu/CentOS/Fedora）
+sudo sh -c 'sed -i "/# GitHub520 Host Start/Q" /etc/hosts && curl https://raw.hellogithub.com/hosts >> /etc/hosts'
+
+BSD/macOS
+sudo sed -i "" "/# GitHub520 Host Start/,/# Github520 Host End/d" /etc/hosts && curl https://raw.hellogithub.com/hosts | sudo tee -a /etc/hosts
+
+将上面的命令添加到 cron，可定时执行。使用前确保 GitHub520 内容在该文件最后部分。
+
+在 Docker 中运行，若遇到 Device or resource busy 错误，可使用以下命令执行
+
+cp /etc/hosts ~/hosts.new && sed -i "/# GitHub520 Host Start/Q" ~/hosts.new && curl https://raw.hellogithub.com/hosts >> ~/hosts.new && cp -f ~/hosts.new /etc/hosts
+
+### 2.4 AdGuard 用户（自动方式）
+在 过滤器>DNS 封锁清单>添加阻止列表>添加一个自定义列表，配置如下：
+
+名称：随意
+
+URL：https://raw.hellogithub.com/hosts（和上面 SwitchHosts 使用的一样）
+
+如图：
+
+![6c8edd526e092070dcc79eceb839c2d5_AdGuard-rules](https://github.com/user-attachments/assets/3de7e705-583d-4219-9f51-f8cfeca313a0)
+
+
+更新间隔在 设置 > 常规设置 > 过滤器更新间隔（设置一小时一次即可），记得勾选上 使用过滤器和 Hosts 文件以拦截指定域名
+
+![79b2783eca4aca9343342f21caae6292_AdGuard-rules2](https://github.com/user-attachments/assets/f06a78e6-e5d7-4e29-8263-69dba75225f1)
+
+Tip：不要添加在 DNS 允许清单 内，只能添加在 DNS 封锁清单 才管用。 另外，AdGuard for Mac、AdGuard for Windows、AdGuard for Android、AdGuard for IOS 等等 AdGuard 家族软件 添加方法均类似。
+
+三、效果对比
+之前的样子：
+<img width="979" alt="7a0e60b15436847dbc2006687572d1ad_old" src="https://github.com/user-attachments/assets/db349bce-20ce-45a4-a61b-d95d79c55715" />
+
+修改完 hosts 的样子：
+<img width="964" alt="140b91c32028d1f7a3e00faddaf8807e_new" src="https://github.com/user-attachments/assets/d976f77e-422a-4fc6-a5b6-90b00edbbae9" />
 
 ## 其他
 
