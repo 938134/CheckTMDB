@@ -3,7 +3,7 @@ name: Check Hosts
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 10,22 * * *'  # 每天 10:00 和 22:00 执行
+    - cron: '0 1,5,9,13,17,21 * * *' # 每天从5点开始，每4小时执行1次
 
 permissions:
   contents: write  # 确保有写入权限
